@@ -28,15 +28,13 @@ This software is an experiment. It's purpose will be made clear later.
 
    JSON Error: {}
 
-* Peer A confirms the identity of the IP message using previous codes, keys and salts.
-* If succesful, Peer A sends a success message. Peer A also generates a Cluster UID, and sends it to Peer B. If something isn't right, sends error.
+* Peer A confirms the identity of the IP message using previous codes, keys and salts. If succesful, Peer A sends a success message. Peer A also generates a Cluster UID, and sends it to Peer B. If something isn't right, sends error.
 
    JSON Success: {}
 
    JSON Error: {}
 
-* Peer A and B are now trusted peers. 
-* Peer B accepts with a success code.
+* Peer A and B are now trusted peers and a new peer cluster has been generated between them. Peer B accepts with a success code.
 
    JSON Success: {}
 
