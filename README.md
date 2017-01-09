@@ -166,3 +166,15 @@ This software is an experiment. It's purpose will be made clear later.
    ```
 
 ###3. Publish IP changes to peers
+
+###4. Entanglement Protocol Request/Response Codes
+
+Request/response codes will be similar to HTTP status codes. New codes will be appended to this table.
+
+| Code          | Meaning             | Notes               |
+| ------------- | ------------------- | ------------------- |
+| 100           | Introduction Step 1 | Offline (QR or NFC) |
+| 110           | Intro Step 2        | Online              |
+| 120           | Intro Step 3        | Online              |
+| 200           | Good/Success        |                     |
+| 400           | Error               |                     |
