@@ -37,33 +37,33 @@ This software is an experiment. It's purpose will be made clear later.
 * If succesful, Peer B responds with a success message, includes relevant peer-unique codes, tells Peer A his external IP, and sends it all encrypted via Peer A's key and salt. If not successful, sends error.
 
    JSON Success: 
-   `{'response':'200', 'request':'120', 'peerId':'af2ef074-637e-4d18-83b3-047f5daf355f', 'payload':'encrypted string'}`
+   `{'response':'200', 'echoIp':'Always echo back the ip of the peer', 'request':'120', 'peerId':'af2ef074-637e-4d18-83b3-047f5daf355f', 'payload':'encrypted string'}`
    
    Payload decrypted:
    `{'pid':'0c41c34e-bda2-405b-ae0b-c66e41c5b2db', 'testString': 'the other random string from offline exchange'} // tell the peer something only the two of you would know.`
 
    JSON Error: 
-   `{'response':'400', errorText:'A brief summary of what went wrong.'}`
+   `{'response':'400', 'echoIp':'Always echo back the ip of the peer', errorText:'A brief summary of what went wrong.'}`
    
    (Timeouts will result in an error message, with a "Retry" or "Cancel" option. Retry goes back to the begining of step #2. Canceling or errors must delete all prior pending data for this peer connection.)
 
 * Peer A confirms the identity of the IP message using previous codes, keys and salts. If succesful, Peer A sends a success message. Peer A also generates a Cluster UID, and sends it to Peer B. If something isn't right, sends error.
 
    JSON Success: 
-   `{'response':'200', 'request':'130', 'payload':'encrypted sting'}`
+   `{'response':'200', 'echoIp':'Always echo back the ip of the peer', 'request':'130', 'payload':'encrypted sting'}`
    
    Payload decrypted:
    `{'clusterId':'ff4c68ab-2da2-48fb-bca8-a124d299a915', 'members': ['af2ef074-637e-4d18-83b3-047f5daf355f', '0c41c34e-bda2-405b-ae0b-c66e41c5b2db']}
 
    JSON Error: 
-   `{'response':'400', errorText:'A brief summary of what went wrong.'}`
+   `{'response':'400', 'echoIp':'Always echo back the ip of the peer', errorText:'A brief summary of what went wrong.'}`
    
    (Timeouts will result in an error message, with a "Retry" or "Cancel" option. Retry goes back to the begining of step #2. Canceling or errors must delete all prior pending data for this peer connection.)
 
 * Peer A and B are now trusted peers and a new peer cluster has been generated between them. Peer B accepts with a success code.
 
    JSON Success: 
-   `{'response':'200'}`
+   `{'response':'200', 'echoIp':'Always echo back the ip of the peer'}`
 
 ###3. Publish IP changes to peers
 
