@@ -10,18 +10,51 @@ This software is an experiment. It's purpose will be made clear later.
 
    #### JSON Offline Handshake: 
    
-   `{'request':'100', 'peerInfo':{'pid':'0c41c34e-bda2-405b-ae0b-c66e41c5b2db', 'host': 'either an IP address or "unknown"', 'key':'d23bf636a4df498aa498d7e14ea781c0', 'salt':{'string':'#d7', index:'14'}, 'testString': 'a random string used to test later'}}`
+   ```json
+   {
+      "request": 100,
+      "peerInfo": {
+         "pid": "0c41c34e-bda2-405b-ae0b-c66e41c5b2db",
+         "host": "either an IP address or 'unknown'",
+         "key": "d23bf636a4df498aa498d7e14ea781c0",
+         "salt": {
+            "string": "#d7",
+            "index": 14
+         },
+         "testString": "a random string used to test later"
+      }
+   }
+   ```
 
 * Peer B generates an ID, key and salt that will only be used with Peer A. This data is peer-unique, so Peer B must record a this data associated with Peer A and Peer A's information in a relational dataebase. 
 * Responds via the same ofline method with this information, as well as its IP address and total peers. If Peer B does not know its external IP address, it runs IPgetter script. IPgetter should be used rarely.
 
    #### JSON Offline Response: 
    
-   `{'response':'200', 'peerInfo':{'pid':'af2ef074-637e-4d18-83b3-047f5daf355f', 'host': '123.45.67.89', 'key':'459c5876704649cb930de10b39bb5610', 'salt':{'string':'#9j', index:'9'}, 'testString': 'a random string used to test later'}}`
+   ```json
+   {
+	   "response": 200,
+	   "peerInfo": {
+		   "pid": "af2ef074-637e-4d18-83b3-047f5daf355f",
+		   "host": "123.45.67.89",
+		   "key": "459c5876704649cb930de10b39bb5610",
+		   "salt": {
+			   "string": "#9j",
+			   "index": "9"
+		   },
+		   "testString": "a random string used to test later"
+	   }
+   }
+   ```
 
    #### JSON Offline Error: 
    
-   `{'response':'400', errorText:'A brief summary of what went wrong.'}`
+   ```json
+   {
+      "response":"400", 
+      "errorText":"A brief summary of what went wrong."
+   }
+   ```
 
 ###2. Online Handshake
 
