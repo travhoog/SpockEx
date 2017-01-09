@@ -90,12 +90,14 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
 	"response": 200,
-	"echoIp": "Always echo back the ip of the peer",
+	"echoIp": "234.56.78.90",
 	"request": 120,
 	"peerId": "af2ef074-637e-4d18-83b3-047f5daf355f",
 	"payload": "encrypted string"
    }
    ```
+   
+   Note: Peer A can now know and record it's own external IP, if it doesn't know already
    
    #### Payload decrypted:
    
@@ -111,7 +113,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 400, 
-      "echoIp": "Always echo back the ip of the peer",
+      "echoIp": "234.56.78.90",
       "errorText": "A brief summary of what went wrong."
    }
    ```
@@ -125,7 +127,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 200, 
-      "echoIp": "Always echo back the ip of the peer",
+      "echoIp": "123.45.67.89",
       "request": 130,
       "paylaod": "A brief summary of what went wrong."
    }
@@ -145,7 +147,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 400, 
-      "echoIp": "Always echo back the ip of the peer",
+      "echoIp": "123.45.67.89",
       "errorText": "A brief summary of what went wrong."
    }
    ```
@@ -159,7 +161,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 200, 
-      "echoIp": "Always echo back the ip of the peer"
+      "echoIp": "234.56.78.90"
    }
    ```
 
