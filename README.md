@@ -90,7 +90,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
 	"response": 200,
-	"echoIp": "234.56.78.90",
+	"echoHost": "234.56.78.90",
 	"request": 120,
 	"peerId": "af2ef074-637e-4d18-83b3-047f5daf355f",
 	"payload": "encrypted string"
@@ -113,7 +113,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 400, 
-      "echoIp": "234.56.78.90",
+      "echoHost": "234.56.78.90",
       "errorText": "A brief summary of what went wrong."
    }
    ```
@@ -127,7 +127,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 200, 
-      "echoIp": "123.45.67.89",
+      "echoHost": "123.45.67.89",
       "request": 130,
       "paylaod": "A brief summary of what went wrong."
    }
@@ -147,7 +147,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 400, 
-      "echoIp": "123.45.67.89",
+      "echoHost": "123.45.67.89",
       "errorText": "A brief summary of what went wrong."
    }
    ```
@@ -161,7 +161,7 @@ This software is an experiment. It's purpose will be made clear later.
    ```json
    {
       "response": 200, 
-      "echoIp": "234.56.78.90"
+      "echoHost": "234.56.78.90"
    }
    ```
 
