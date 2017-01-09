@@ -15,7 +15,7 @@ This software is an experiment. It's purpose will be made clear later.
 * Responds via the same ofline method with this information, as well as its IP address and total peers. If Peer B does not know its external IP address, it runs IPgetter script. IPgetter should be used rarely.
 
    JSON Offline Response: 
-   `{'response':'200', 'peerInfo':{'pid':'af2ef074-637e-4d18-83b3-047f5daf355f', 'host': '123.45.67.89', 'key':'459c5876704649cb930de10b39bb5610', 'salt':{'string':'#9j', index:'9'}}}`
+   `{'response':'200', 'peerInfo':{'pid':'af2ef074-637e-4d18-83b3-047f5daf355f', 'host': '123.45.67.89', 'key':'459c5876704649cb930de10b39bb5610', 'salt':{'string':'#9j', index:'9'}, 'testString': 'a random string used to test later'}}`
 
    JSON Offline Error: 
    `{'code':'400', errorText:'A brief summary of what went wrong.'}`
