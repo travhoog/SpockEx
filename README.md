@@ -18,7 +18,7 @@ This software is an experiment. It's purpose will be made clear later.
    `{'response':'200', 'peerInfo':{'pid':'af2ef074-637e-4d18-83b3-047f5daf355f', 'host': '123.45.67.89', 'key':'459c5876704649cb930de10b39bb5610', 'salt':{'string':'#9j', index:'9'}, 'testString': 'a random string used to test later'}}`
 
    JSON Offline Error: 
-   `{'code':'400', errorText:'A brief summary of what went wrong.'}`
+   `{'response':'400', errorText:'A brief summary of what went wrong.'}`
 
 ###2. Online Handshake
 
@@ -43,7 +43,7 @@ This software is an experiment. It's purpose will be made clear later.
    `{'pid':'0c41c34e-bda2-405b-ae0b-c66e41c5b2db', 'testString': 'the other random string from offline exchange'} // tell the peer something only the two of you would know.`
 
    JSON Error: 
-   `{'response':'400'}`
+   `{'response':'400', errorText:'A brief summary of what went wrong.'}`
    
    (Timeouts will result in an error message, with a "Retry" or "Cancel" option. Retry goes back to the begining of step #2. Canceling or errors must delete all prior pending data for this peer connection.)
 
@@ -56,7 +56,7 @@ This software is an experiment. It's purpose will be made clear later.
    `{'clusterId':'ff4c68ab-2da2-48fb-bca8-a124d299a915', 'members': ['af2ef074-637e-4d18-83b3-047f5daf355f', '0c41c34e-bda2-405b-ae0b-c66e41c5b2db']}
 
    JSON Error: 
-   `{'code':'400'}`
+   `{'response':'400', errorText:'A brief summary of what went wrong.'}`
    
    (Timeouts will result in an error message, with a "Retry" or "Cancel" option. Retry goes back to the begining of step #2. Canceling or errors must delete all prior pending data for this peer connection.)
 
