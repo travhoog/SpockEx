@@ -97,7 +97,7 @@ This software is an experiment. It's purpose will be made clear later.
    }
    ```
    
-   Note: Peer A can now know and record it's own external IP, if it doesn't know already
+   Note: Peer A can now know and record it's own external IP, if it doesn't know already. We will ALWAYS echo back the IP of the host we are talking to from this point on. It's just a handy way to keep track of changing IP's when those hosts are mobile.
    
    #### Payload decrypted:
    
