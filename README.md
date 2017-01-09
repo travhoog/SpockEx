@@ -40,7 +40,7 @@ This software is an experiment. It's purpose will be made clear later.
 		   "key": "459c5876704649cb930de10b39bb5610",
 		   "salt": {
 			   "string": "#9j",
-			   "index": "9"
+			   "index": 9
 		   },
 		   "testString": "a random string used to test later"
 	   }
@@ -51,8 +51,8 @@ This software is an experiment. It's purpose will be made clear later.
    
    ```json
    {
-      "response":"400", 
-      "errorText":"A brief summary of what went wrong."
+      "response": 400, 
+      "errorText": "A brief summary of what went wrong."
    }
    ```
 
@@ -63,11 +63,22 @@ This software is an experiment. It's purpose will be made clear later.
 
    #### JSON Online Handhake: 
    
-   `{'request':'110', peerId:'0c41c34e-bda2-405b-ae0b-c66e41c5b2db', 'payload':'encrypted string'}`
+   ```json
+   {
+	"request": 110,
+	"peerId": "0c41c34e-bda2-405b-ae0b-c66e41c5b2db",
+	"payload": "encrypted string"
+   }
+   ```
    
    #### Payload decrypted:
    
-   `{'pid':'af2ef074-637e-4d18-83b3-047f5daf355f', 'testString': 'the random string from offline exchange'} // tell the peer something only the two of you would know.`
+   ```json
+   {
+	"pid": "af2ef074-637e-4d18-83b3-047f5daf355f",
+	"testString": "the random string from offline exchange"
+   }
+   ```
    
    (Timeouts will result in an error message, with a "Retry" or "Cancel" option. Retry goes back to the begining of step #2. Canceling must delete all prior pending data for this peer connection.)
 
@@ -76,31 +87,68 @@ This software is an experiment. It's purpose will be made clear later.
 
    #### JSON Success: 
    
-   `{'response':'200', 'echoIp':'Always echo back the ip of the peer', 'request':'120', 'peerId':'af2ef074-637e-4d18-83b3-047f5daf355f', 'payload':'encrypted string'}`
+   ```json
+   {
+	"response": 200,
+	"echoIp": "Always echo back the ip of the peer",
+	"request": 120,
+	"peerId": "af2ef074-637e-4d18-83b3-047f5daf355f",
+	"payload": "encrypted string"
+   }
+   ```
    
    #### Payload decrypted:
    
-   `{'pid':'0c41c34e-bda2-405b-ae0b-c66e41c5b2db', 'testString': 'the other random string from offline exchange'} // tell the peer something only the two of you would know.`
+   ```json
+   {
+	"pid": "0c41c34e-bda2-405b-ae0b-c66e41c5b2db",
+	"testString": "the random string from offline exchange"
+   }
+   ```
 
    #### JSON Error: 
    
-   `{'response':'400', 'echoIp':'Always echo back the ip of the peer', errorText:'A brief summary of what went wrong.'}`
+   ```json
+   {
+      "response": 400, 
+      "echoIp": "Always echo back the ip of the peer",
+      "errorText": "A brief summary of what went wrong."
+   }
+   ```
    
    (Timeouts will result in an error message, with a "Retry" or "Cancel" option. Retry goes back to the begining of step #2. Canceling or errors must delete all prior pending data for this peer connection.)
 
 * Peer A confirms the identity of the IP message using previous codes, keys and salts. If succesful, Peer A sends a success message. Peer A also generates a Cluster UID, and sends it to Peer B. If something isn't right, sends error.
 
-   #### JSON Success: 
+   #### JSON Success:  
    
-   `{'response':'200', 'echoIp':'Always echo back the ip of the peer', 'request':'130', 'payload':'encrypted sting'}`
+   ```json
+   {
+      "response": 200, 
+      "echoIp": "Always echo back the ip of the peer",
+      "request": 130,
+      "paylaod": "A brief summary of what went wrong."
+   }
+   ```
    
    #### Payload decrypted:
    
-   `{'clusterId':'ff4c68ab-2da2-48fb-bca8-a124d299a915', 'members': ['af2ef074-637e-4d18-83b3-047f5daf355f', '0c41c34e-bda2-405b-ae0b-c66e41c5b2db']}
+   ```json
+   {
+	"clusterId": "f4c68ab-2da2-48fb-bca8-a124d299a915",
+	"members": ["af2ef074-637e-4d18-83b3-047f5daf355f", "0c41c34e-bda2-405b-ae0b-c66e41c5b2db"]
+   }
+   ```
 
    #### JSON Error: 
    
-   `{'response':'400', 'echoIp':'Always echo back the ip of the peer', errorText:'A brief summary of what went wrong.'}`
+   ```json
+   {
+      "response": 400, 
+      "echoIp": "Always echo back the ip of the peer",
+      "errorText": "A brief summary of what went wrong."
+   }
+   ```
    
    (Timeouts will result in an error message, with a "Retry" or "Cancel" option. Retry goes back to the begining of step #2. Canceling or errors must delete all prior pending data for this peer connection.)
 
@@ -108,10 +156,11 @@ This software is an experiment. It's purpose will be made clear later.
 
    #### JSON Success: 
    
-   `{'response':'200', 'echoIp':'Always echo back the ip of the peer'}`
+   ```json
+   {
+      "response": 200, 
+      "echoIp": "Always echo back the ip of the peer"
+   }
+   ```
 
 ###3. Publish IP changes to peers
-
-#### Scenario B: One New Peer Joins Existing Cluster
-
-#### Scenario C: Two Peers From Separate Clusters Become Bridges for the Two Clusters..
