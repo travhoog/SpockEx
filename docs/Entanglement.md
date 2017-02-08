@@ -6,7 +6,7 @@ To facilitate the SpockEx application, a new protocol for connecting peers must 
 > 
 > [Quantum Entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement) article on WikiPedia (Feb 7, 2017)
 
-As the name suggests, SpockEx "Entanglement" makes connections personal by forcing users to make physical contact in order to interract at a distance. While this approach may introduce some unique limitations, we beleive the practice of sharing confidential keys and connection information offline versus online will also make the protocol extremely robust and secure.
+As the name suggests, SpockEx "Entanglement" makes connections personal by forcing users to make physical contact initially in order to interract at a distance later on. While this approach may introduce some unique limitations, we beleive the practice of sharing confidential keys and connection information offline versus online will also make the protocol extremely robust and secure.
 
 ###1. Offline communitcation
 
