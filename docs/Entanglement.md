@@ -1,4 +1,4 @@
-## Entanglement Protocol (Rough Draft, WIP)
+## Entanglement Protocol Specification (alpha)
 
 To facilitate the SpockEx application, a new protocol for connecting peers must be concieved. This protocol is called Entanglement.
 
