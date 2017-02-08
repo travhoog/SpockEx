@@ -12,14 +12,30 @@ The SpockEx application is intended to be a tool for connecting peers on a distr
 
 The process for connecting peers.
 
-### Asset Offer Protocol
+### Protocol for Defining Basic Asset Components. (Coming Soon)
 
-Coming Soon
+If you make a cake from scratch, components will be eggs, flour, sugar, human labor, etc. We need a why to poll peers to establish values, demand, etc.
 
-### Asset Request Protocol
+### Composite Asset Creation Protocol (Coming Soon)
 
-Coming Soon
+How new assets are defined, either from predefined primative components, or from other composite components. 
 
-### Syncronization Protocol
+### Asset Offer Protocol (Coming Soon)
 
-Coming Soon
+Once one has an asset, one my offer any surplus to the community.
+
+### Asset Request Protocol (Coming Soon)
+
+Collect and display any offers to the community.
+
+### Asset Acceptance Protocol (Coming Soon)
+
+How assets are accepted and marked as complete.
+
+### Publish/Syncronize Protocol (Coming Soon)
+
+Will likely use ZeroMQ for publishing to established peers.
+
+### Share Ratio Protocol (Coming Soon)
+
+With data now syncronized, we must assign share ratios (giving vs recieving) to peers to inform the community's future sharing decisions.
