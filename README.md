@@ -6,4 +6,4 @@ SpockEx is short for "Spock Exchange", which is itself a play on "Stock Exchange
 
 The SpockEx application is intended to be a tool for connecting peers on a distributed, non-hierarchical database, for the purposes of sharing and storing information redundantly. The intended data to be shared can be, but is not limited to, records of freely-shared goods or services (or assets), along with nested records of the freely-shared assets that serve as components for the resulting asset, the data for which can be stored locally or by the peers who provided each component asset.
 
-[Entanglement Protocol](/docs/Entangelment.md) - The process for connecting peers.
+[Entanglement Protocol](docs/Entanglement.md) - The process for connecting peers.
