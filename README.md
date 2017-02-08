@@ -1,8 +1,20 @@
 # SpockEx
 
-This software is an experiment. It's purpose will be made clear later.
+##Introduction
 
-## Entanglement Protocol
+SpockEx is short for "Spock Exchange", which is itself a play on "Stock Exchange". The idea is a mashup of two concepts: one of trading and commerce, and the other from the post-capitalist economy in the fictional Star Trek universe. Thus, the "Spock Exchange" is intended as a means of exchange of goods and services that bypasses rather than replaces the need for money.
+
+The SpockEx application is intended to be a tool for connecting peers on a distributed, non-hierarchical database, for the purposes of sharing and storing information redundantly. The intended data to be shared can be, but is not limited to, records of freely-shared goods or services (or assets), along with nested records of the freely-shared assets that serve as components for the resulting asset, the data for which can be stored locally or by the peers who provided each component asset.
+
+To facilitate this, a new protocol for connecting peers must be concieved. This protocol is called Entanglement.
+
+> Quantum entanglement is a physical phenomenon that occurs when pairs or groups of particles are generated or interact in ways such that the quantum state of each particle cannot be described independently of the others, even when the particles are separated by a large distance—instead, a quantum state must be described for the system as a whole.
+> 
+> [Quantum Entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement) article on WikiPedia (Feb 7, 2017)
+
+As the name suggests, SpockEx "Entanglement" makes connections personal but forcing users to make physical contact in order to interract at a distance. While this approach may introduce some unique limitations, we beleive the practice of sharing confidential keys and connection information offline versus online will also make the protocol extremely robust and secure.
+
+## Entanglement Protocol (Rough Draft, WIP)
 
 ###1. Offline communitcation
 
