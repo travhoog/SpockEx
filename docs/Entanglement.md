@@ -1,5 +1,13 @@
 ## Entanglement Protocol (Rough Draft, WIP)
 
+To facilitate the SpockEx application, a new protocol for connecting peers must be concieved. This protocol is called Entanglement.
+
+> Quantum entanglement is a physical phenomenon that occurs when pairs or groups of particles are generated or interact in ways such that the quantum state of each particle cannot be described independently of the others, even when the particles are separated by a large distance—instead, a quantum state must be described for the system as a whole.
+> 
+> [Quantum Entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement) article on WikiPedia (Feb 7, 2017)
+
+As the name suggests, SpockEx "Entanglement" makes connections personal but forcing users to make physical contact in order to interract at a distance. While this approach may introduce some unique limitations, we beleive the practice of sharing confidential keys and connection information offline versus online will also make the protocol extremely robust and secure.
+
 ###1. Offline communitcation
 
 * Peer A generates a JSON message within a QR code or NDEF message for Peer B to read. The message contains a peer-unique ID, along with the peer's external IP address, a peer-unique encryption key, a peer-unique salt, and a total peers message (integer from 0-max). since much of this data is peer-unique, Peer A must record a this data associated with Peer B in a relational dataebase, and anticipate more peer-unique info yet to come from Peer B. If Peer A doesn't know it's external IP, it'll get this from Peer B later, and sends an "unknown" message for now.
