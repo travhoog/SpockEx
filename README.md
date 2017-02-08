@@ -8,7 +8,7 @@ The SpockEx application is intended to be a tool for connecting peers on a distr
 
 ## Protocols
 
-### [Entanglement Protocol](docs/Entanglement.md)
+### [Entanglement Protocol Specification (alpha)](docs/Entanglement.md)
 
 The process for connecting peers.
 
